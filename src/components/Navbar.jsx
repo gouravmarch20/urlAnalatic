@@ -35,7 +35,7 @@ const Navbar = () => {
           ) : (
             <div>
               <Link
-                to={"/"}
+                // to={"/"}
                 onClick={() => {
                   toast.success("You logOut", {})
 
