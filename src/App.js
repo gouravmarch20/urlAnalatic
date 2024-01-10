@@ -10,6 +10,7 @@ import PrivateRoute from "./components/PrivateRoute"
 
 import "react-toastify/dist/ReactToastify.css"
 import Navbar from "./components/Navbar"
+import PageNotFound from "./components/PageNotFound"
 
 const App = () => {
 
@@ -36,11 +37,16 @@ const App = () => {
       <Routes>
         <Route path="/sign-in" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
+
         <Route element={<PrivateRoute />}>
           <Route path="/" element={<Home />} />
-
           <Route path="/analytics" element={<AnalyticLink />} />
         </Route>
+
+        <Route
+                    path="*"
+                    element={<PageNotFound />}
+                />
       </Routes>
     </BrowserRouter>
   )
