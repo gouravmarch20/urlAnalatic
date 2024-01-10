@@ -25,7 +25,10 @@ const CreateSortUrl = () => {
       return !!pattern.test(str)
     }
 
-    if (newUrl === "" || !validURL()) {
+    console.log(newUrl === "" , validURL());
+    
+
+    if (newUrl === "" || validURL()) {
       toast.error(`not a valid link`, {})
     } else {
       dispatch(createUrl({ url: newUrl, email, username }))
